@@ -1,0 +1,89 @@
+---
+default_domain: happy.blogsoso.com
+default_author: happy
+default_desc: 快乐的马农，认认真真写博客，乐观的生活！
+default_theme: default
+default_keywords: 程序，代码，马农，快乐，happy，doc5
+assets_version: 2012011501
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        {% if page.title != null %}
+        <title>{{page.title}} | {{ page.default_desc }} - {{ page.default_author }}</title>
+        {% else %}
+        <title>{{ page.default_desc }} - {{ page.default_author }}</title>
+        {% endif %}
+        
+        {% if page.theme != null %}
+            <link rel="stylesheet" href="/stylesheets/themes/{{ page.theme }}/style.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% else %}
+            <link rel="stylesheet" href="/stylesheets/themes/{{ page.default_theme }}/style.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% endif %}
+        
+        <script src="/javascripts/jquery.min.js"></script>
+        
+        {% if page.desc != null %}
+            <meta name="description" content="{{ page.desc }}" /> 
+        {% else %}
+            <meta name="description" content="{{ page.default_desc }}" /> 
+        {% endif %}
+        
+        {% if page.keywords != null %}
+            <meta name="keywords" content="{{ page.keywords }}" /> 
+        {% else %}
+            <meta name="keywords" content="{{ page.default_keywords }}" /> 
+        {% endif %}
+    </head>
+    <body>
+        <div id="header">
+            <div class="content-center">                
+                <div class="description">
+                    <h1><a href="{{ site.base-url }}">{{ page.default_author }}</a> Blogsoso</h1>
+                    <h2>
+                        <a href="{{ site.base-url }}">{{ page.default_desc }}</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="navigation">   
+                <div class="content-center">                    
+                    <a href="{{ site.base-url }}">首页</a>
+                    <a href="/about/">关于</a>
+                    <a href="/atom.xml" target="_blank">订阅</a>
+                </div>
+            </div>           
+        </div>
+
+        <div id="main" class="content-center clearfix">
+            <div class="sider">
+                <div class="box">
+                    <h3>文章分类</h3>
+                    <ul>
+                        {% for category in site.categories %}
+                        <li><a href="/{{category | first}}/">{{category | first}} ({{category | last | size }})</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>            
+            
+            <div class="content">
+                {{ content }}
+            </div>
+        </div>
+        
+        <div id="footer" class="">
+            <div class="footer-line content-center">
+                
+            </div>
+            <div class="copyright">
+                 copyright 2012  &copy; happy blogsoso
+            </div>
+            <div class="friend-links">                
+                友情链接: <a href="http://www.doc5.com" target='_blank'>doc5首页</a>
+                 <a href="http://www.huabaner.net" target='_blank'>花瓣儿网导航</a>
+            </div>
+        </div>
+
+    </body>
+</html>
