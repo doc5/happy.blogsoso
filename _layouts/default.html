@@ -1,10 +1,11 @@
 ---
+default_motto: 精心，精业，精品
 default_domain: happy.blogsoso.com
 default_author: happy
 default_desc: 个人站长、企业网站推广、网络推广、SEO、IT技术、互联网资讯、网络营销、企业博客、博客大全！
 default_theme: default
 default_keywords: 个人站长、企业网站推广、网络推广、SEO、IT技术、互联网资讯、网络营销、企业博客、博客大全
-assets_version: 2012011501
+assets_version: 2012011502
 ---
 <!doctype html>
 <html lang="en">
@@ -38,14 +39,13 @@ assets_version: 2012011501
     </head>
     <body>
         <div id="header">
-            <div class="content-center">                
-                <div class="description">
-                    <h1><a href="{{ site.base-url }}">{{ page.default_author }}</a> blogsoso</h1>
-                    <h2>
-                        <a href="{{ site.base-url }}">{{ page.default_desc }}</a>
-                    </h2>
-                </div>
+            <div class="description content-center">
+                <h1><a href="{{ site.base-url }}" title="{{ page.default_motto }}">{{ page.default_author }}</a> blogsoso</h1>
+                <h2>
+                    <a href="{{ site.base-url }}" title="{{ page.default_motto }}">{{ page.default_desc }}</a>
+                </h2>
             </div>
+            
             <div class="navigation">   
                 <div class="content-center">                    
                     <a href="{{ site.base-url }}">首页</a>
