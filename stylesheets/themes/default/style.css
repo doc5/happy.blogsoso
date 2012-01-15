@@ -36,7 +36,7 @@ ul {
 }
 
 #header {
-    background: url("images/header-bk.jpg") no-repeat scroll 0 0 #fff;
+    background: url("images/header-bk.jpg?v=2") no-repeat scroll 0 0 #fff;
     color: MediumVioletRed;
 /*    text-transform: uppercase;*/
     width: 100%;
@@ -128,11 +128,20 @@ ul {
 
 #main .content {
     padding-right: 250px;    
-    line-height: 1.5;
+    line-height: 1.5;    
+    color: #565656;
+}
+
+#main .content .post .title {
+    text-align: center;
 }
 
 #main .content .post-tip {
     
+}
+
+#main .content .post .body {
+    font-size: 14px;
 }
 
 #main .content .pagination .post-count {

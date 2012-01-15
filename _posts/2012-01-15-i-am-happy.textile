@@ -5,13 +5,9 @@ title: 我开始写我的博客了哦！
 desc: 今天我开始使用jekyll来写我自己的博客，这是一个全静态的博客，写起来应该是很方便的哈！
 outline: 
 categories:
-    live
-    wang
-    jin
+    博客日志
 tags:
 ---
-<h1>开始我的博客之旅</h1>
-<div class='post-div'>
-<p>总想说hello world!</p>
-<p>jekyll 真的很好用！</p>
-</div>
+<h2>
+    我决定这一次要认认真真的写博客了！
+</h2>
