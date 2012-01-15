@@ -1,1 +1,4 @@
+/_site
+/nbproject
+/_logs/*.log
 /*.swp
