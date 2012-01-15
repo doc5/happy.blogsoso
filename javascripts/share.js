@@ -1,4 +1,4 @@
-function openWindow(channel, category, item, options){
+function openWindow(clicker, channel, category, item, options){
     var pageURL;
     var name = channel + "_" + category + "_" + item;
     var params=null;
@@ -9,9 +9,19 @@ function openWindow(channel, category, item, options){
                 case "music":
                     switch(item){
                         case "google":
-                            pageURL = "/apps/music/google.html";
+                            pageURL = clicker.href;  
                             already = true;
                             params = "width=800, height=605";
+                        break;
+                    }
+                break;
+                
+                case "radio":
+                    switch(item){
+                        case "douban":
+                            pageURL = clicker.href;  
+                            already = true;
+                            params = "width=470, height=342";
                         break;
                     }
                 break;
@@ -20,12 +30,13 @@ function openWindow(channel, category, item, options){
     }
     
     if(already){
-        params =  (params == null ? "" : params + ",") + "toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no";
+        params =  (params == null ? "" : params + ",") + "left=150, top=150, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no";
         var newWindow = window.open(pageURL, name, params);
         if (newWindow.location.href && newWindow.location.href!='about:blank') {
             newWindow.focus();
         }
     }
+    return false;
 }
 
 
