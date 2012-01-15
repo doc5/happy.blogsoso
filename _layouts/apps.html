@@ -1,0 +1,96 @@
+---
+default_name: 
+default_motto: 精心，精业，精品
+default_author: happy
+default_desc: IT技术网址、企业网址、博客大全
+default_theme: default
+default_keywords: 热门网
+assets_version: 2012011502
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        {% if page.title != null %}
+        <title>{{page.title}} | {{ page.default_name }} - {{ page.default_desc }}</title>
+        {% else %}
+        <title> {{ page.default_name }} - {{ page.default_desc }}</title>
+        {% endif %}
+
+        {% if page.theme != null %}
+        <link rel="stylesheet" href="/stylesheets/themes/{{ page.theme }}/kandytabs.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% else %}
+        <link rel="stylesheet" href="/stylesheets/themes/{{ page.default_theme }}/kandytabs.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% endif %}
+        
+        <link rel="stylesheet" href="/stylesheets/share.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+
+        {% if page.theme != null %}
+        <link rel="stylesheet" href="/stylesheets/themes/{{ page.theme }}/apps.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% else %}
+        <link rel="stylesheet" href="/stylesheets/themes/{{ page.default_theme }}/apps.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        {% endif %}
+
+        <script src="/javascripts/jquery.min.js"></script>
+        <script src="/javascripts/kandytabs.pack.js"></script>
+        <script src="/javascripts/share.js?version={{ page.assets_version }}"></script>
+
+        {% if page.desc != null %}
+        <meta name="description" content="{{ page.desc }}" /> 
+        {% else %}
+        <meta name="description" content="{{ page.default_desc }}" /> 
+        {% endif %}
+
+        {% if page.keywords != null %}
+        <meta name="keywords" content="{{ page.keywords }}" /> 
+        {% else %}
+        <meta name="keywords" content="{{ page.default_keywords }}" /> 
+        {% endif %}
+
+        <script type="text/javascript">
+            $(function() {
+                $(".tab-common").KandyTabs();
+                $(".tab-main").KandyTabs();
+            });
+
+        </script>
+        <style type="text/css">
+            .tab-common ul {
+                padding: 0px;
+                font-size: 13px;
+            }
+            .tab-common ul li {
+                float: left;
+                height: 26px;
+                overflow: hidden;
+                padding: 0 0 0 5px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100px;
+            }
+        </style>
+        
+        <base target="_blank"></base>
+    </head>
+    <body>
+        <div id="header">
+            <div class="description content-center">
+                
+            </div>
+
+            <div class="navigation">   
+                
+            </div>           
+        </div>
+
+        <div id="main" class="content-center clearfix">      
+
+            <div class="content">
+                {{ content }}
+            </div>
+        </div>
+
+        {% include default_footer.html %}
+
+    </body>
+</html>

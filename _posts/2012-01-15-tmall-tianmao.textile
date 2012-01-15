@@ -12,7 +12,7 @@ tags:
     电子商务
 ---
 
-<p class="p_img"><img src="/assets/images/uploads/201201/1.jpg" border="0"></p>
+<p class="p_img" style='text-align: center;'><img src="/assets/images/uploads/201201/2.jpg" border="0"></p>
 <p style="text-align: center;"><span style="text-indent: 24px;">淘宝商城(Tmall.com)中文品牌名称<span style="text-indent: 24px;">更改</span>为“天猫”。</span></p>
 <p>1月11日消息，淘宝商城总裁张勇今日宣布，淘宝商城(Tmall.com)更改中文品牌名称，新的名称为“天猫”。</p>
 <p>张勇表示，更改中文名称不是心血来潮，“天猫”是域名tmall.com的中文相关名词，主要目的是给消费者定位更加明确的称号。</p>
