@@ -1,3 +1,5 @@
+2012-01-15-i-am-happy.textile
+
 ---  
 author: happy                                                                                                                                                        
 layout: post
@@ -5,9 +7,8 @@ title: 我开始写我的博客了哦！
 desc: 今天我开始使用jekyll来写我自己的博客，这是一个全静态的博客，写起来应该是很方便的哈！
 outline: 
 categories:
-    随笔
+    心情
+    感悟
 tags:
 ---
-<h2>
-    我决定这一次要认认真真的写博客了！
-</h2>
+

@@ -122,6 +122,10 @@ ul {
     padding: 2px;
 }
 
+#main .sider ul li {
+    margin: 2px;
+}
+
 #main .sider .box {
     margin: 5px;
 }
