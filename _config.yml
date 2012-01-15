@@ -9,5 +9,5 @@ markdown: redcloth
 permalink: 	/archives/:year/:month/:day/:title/
 paginate: 10
 plugins: ./_plugins
-main_domain: happy.blogsoso.com
+main_domain: blogsoso.com
 
