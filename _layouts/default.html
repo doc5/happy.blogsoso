@@ -17,6 +17,8 @@ assets_version: 2012011502
         <title>{{ page.default_desc }} - {{ page.default_author }}</title>
         {% endif %}
         
+        <link rel="stylesheet" href="/stylesheets/share.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
+        
         {% if page.theme != null %}
             <link rel="stylesheet" href="/stylesheets/themes/{{ page.theme }}/style.css?version={{ page.assets_version }}" type="text/css" media="screen" charset="utf-8"/>
         {% else %}
@@ -24,6 +26,7 @@ assets_version: 2012011502
         {% endif %}
         
         <script src="/javascripts/jquery.min.js"></script>
+        <script src="/javascripts/share.js?version={{ page.assets_version }}"></script>
         
         {% if page.desc != null %}
             <meta name="description" content="{{ page.desc }}" /> 
@@ -47,10 +50,9 @@ assets_version: 2012011502
             </div>
             
             <div class="navigation">   
-                <div class="content-center">                    
+                <div class="content-center">   
                     <a href="{{ site.base-url }}">首页</a>
-                    <a href="/about.html">关于</a>
-                    <a href="/atom.xml" target="_blank">订阅</a>
+                    {% include default_nav_linkers.html %}
                 </div>
             </div>           
         </div>
@@ -75,18 +77,7 @@ assets_version: 2012011502
             </div>
         </div>
         
-        <div id="footer" class="">
-            <div class="footer-line content-center">
-                
-            </div>
-            <div class="copyright">
-                 copyright 2012  &copy; happy blogsoso
-            </div>
-            <div class="friend-links">                
-                友情链接: <a href="http://www.doc5.com" target='_blank'>doc5首页</a>
-                 <a href="http://www.huabaner.net" target='_blank'>花瓣儿网导航</a>
-            </div>
-        </div>
+        {% include default_footer.html %}
 
     </body>
 </html>
